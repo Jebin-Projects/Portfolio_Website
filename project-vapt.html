@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project: VAPT Simulation — Anto Sebastine Jebin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <h3 class="logo">Anto Jebin</h3>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="container project-detail-page" data-aos="fade-up">
+    <h2>VAPT on Zero Bank Simulation</h2>
+    
+    <div class="project-detail-center-img">
+        <img src="images/vapt-main.jpg" alt="VAPT Project Main Image">
+    </div>
+
+    <div class="project-detail-info">
+        <h3>Executive Summary</h3>
+        <p>
+            A security assessment of the internal corporate network of Zero Bank was performed on September 9, 2025. The penetration test simulated an attack from an external threat actor to discover and identify vulnerabilities in the infrastructure. A total of 20 vulnerabilities were identified, broken down by severity: 2 Critical, 6 High, 8 Medium, and 4 Low.
+        </p>
+        <p>
+            The highest severity vulnerabilities gave potential attackers the ability to intercept network requests, capture authentication hashes, and perform SMB relay attacks to compromise Active Directory. Exploiting these weaknesses could lead to privilege escalation to the domain-admin level and unrestricted access to sensitive data.
+        </p>
+
+        <h3>Project Scope</h3>
+        <p>The engagement covered multiple facets of the organization's infrastructure to ensure a holistic security review. The in-scope items were:</p>
+        <ul class="about-list">
+            <li>Zero Bank’s internal network and Active Directory</li>
+            <li>Windows client systems</li>
+            <li>Application server (FTP and web services: VSFTP, DVWA)</li>
+            <li>Mutillidae web application and its database system</li>
+        </ul>
+
+        <h3>Testing Methodology</h3>
+        <p>The testing methodology was divided into five distinct phases: Scope Definition, Reconnaissance, Vulnerability Analysis, Exploitation, and Reporting. The process involved both automated tools and manual exploitation techniques, including:</p>
+        <ul class="about-list">
+            <li><strong>Reconnaissance:</strong> Performed port scanning, service enumeration, and OS fingerprinting to map potential attack surfaces.</li>
+            <li><strong>Vulnerability Analysis:</strong> Matched identified services to known vulnerabilities such as the VSFTPD backdoor, SMB relay, and SQL injection.</li>
+            <li><strong>Exploitation:</strong> Executed attacks like LLMNR/NBT-NS poisoning to capture NTLMv2 hashes, exploited the VSFTPD backdoor for shell access, and performed SQL injection on the Mutillidae database.</li>
+            <li><strong>Post-Exploitation:</strong> Demonstrated privilege escalation, simulated lateral movement, and evaluated risks of data exfiltration.</li>
+        </ul>
+
+        <h3>Key Findings</h3>
+        <div class="findings-grid">
+            <div class="finding-card">
+                <h4><i class="fas fa-bomb"></i> MS17-010 (EternalBlue)</h4>
+                <p>A critical Windows vulnerability allowing unauthenticated remote code execution, which could lead to rapid network-wide compromise.</p>
+            </div>
+            <div class="finding-card">
+                <h4><i class="fas fa-door-open"></i> VSFTPD v2.3.4 Backdoor</h4>
+                <p>An insecure configuration in the FTP service that granted attackers an unauthorized remote shell on the host system without authentication.</p>
+            </div>
+            <div class="finding-card">
+                <h4><i class="fas fa-database"></i> SQL Injection</h4>
+                <p>Improper input validation in web applications allowed for malicious SQL queries to bypass authentication and extract sensitive database information.</p>
+            </div>
+             <div class="finding-card">
+                <h4><i class="fas fa-code"></i> Cross-Site Scripting (XSS)</h4>
+                <p>The application did not properly sanitize user-supplied input, allowing attackers to inject malicious scripts to hijack user sessions or steal cookies.</p>
+            </div>
+        </div>
+
+        <h3>Tools Used</h3>
+        <div class="tech-logo-grid">
+            <span><i class="fas fa-bug"></i> BurpSuite</span>
+            <span><i class="fas fa-terminal"></i> Metasploit</span>
+            <span><i class="fas fa-search"></i> Nmap</span>
+            <span><i class="fas fa-shield-alt"></i> Nessus</span>
+            <span><i class="fas fa-database"></i> SQLMap</span>
+            <span><i class="fas fa-network-wired"></i> Wireshark</span>
+            <span><i class="fas fa-key"></i> Hydra</span>
+            <span><i class="fas fa-server"></i> Wazuh</span>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Anto Sebastine Jebin</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

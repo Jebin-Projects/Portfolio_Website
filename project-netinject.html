@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project: NetInject — Anto Sebastine Jebin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <h3 class="logo">Anto Jebin</h3>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="container project-detail-page" data-aos="fade-up">
+    <h2>NetInject — Network Interceptor</h2>
+    <div class="project-detail-layout">
+        <div class="project-detail-img">
+            <img src="images/netinject.jpg" alt="NetInject Project Screenshot">
+        </div>
+        <div class="project-detail-info">
+            <h3>Project Overview</h3>
+            <p>
+                Developed as part of my advanced Python studies based on the Z-Security curriculum, NetInject is a powerful Man-in-the-Middle (MITM) tool. It's designed to intercept network traffic and modify data packets on the fly to perform targeted actions, such as forcing file downloads on other devices within the network.
+            </p>
+            <h3>Key Techniques Implemented</h3>
+            <ul class="about-list">
+                <li><strong>ARP Spoofing:</strong> The core of the tool, tricking devices on a local network into sending their traffic through the attacker's machine.</li>
+                <li><strong>Packet Interception:</strong> Utilizes netfilter queues to capture and hold packets for analysis and modification before they reach their destination.</li>
+                <li><strong>Dynamic Packet Modification:</strong> Uses the Scapy library to parse and rebuild intercepted HTTP packets, replacing legitimate download links with malicious ones.</li>
+                <li><strong>HTTPS Bypass (Proof of Concept):</strong> Includes functionality to demonstrate SSL stripping techniques in controlled lab environments.</li>
+            </ul>
+            <h3>Technologies Used</h3>
+            <div class="tech-logo-grid">
+                <span><i class="devicon-python-plain colored"></i> Python</span>
+                <span><i class="devicon-linux-plain colored"></i> Linux (Kali)</span>
+                <span><i class="fas fa-network-wired"></i> Scapy</span>
+                <span><i class="fas fa-shield-alt"></i> Netfilter</span>
+            </div>
+             <div class="project-detail-buttons">
+                <a href="https://github.com/Jebin-Projects/Web-Verse-developed-Byjebin.git" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Anto Sebastine Jebin</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

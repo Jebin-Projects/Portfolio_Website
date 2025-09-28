@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project: Autoxploit — Anto Sebastine Jebin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <h3 class="logo">Anto Jebin</h3>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="container project-detail-page" data-aos="fade-up">
+    <h2>Autoxploit — Website Vulnerability Scanner</h2>
+    
+    <div class="project-detail-center-img">
+        <img src="images/autoxploit.jpg" alt="Autoxploit Project Screenshot">
+    </div>
+
+    <div class="project-detail-info">
+        <h3>Project Overview</h3>
+        <p>
+            Autoxploit is a comprehensive security toolkit designed to automate the process of web application vulnerability scanning. Built with a Python backend, it combines multiple scanning modules into a single, cohesive solution. The tool features a clean, web-based graphical user interface (GUI) built with HTML, CSS, and Node.js, allowing for intuitive operation in controlled testing environments.
+        </p>
+        
+        <h3>Architectural Design</h3>
+        <p>
+            The architecture is modular, allowing for independent development and testing of each vulnerability scanner. The Python core handles the scanning logic, request management, and payload generation, while the Node.js server manages the user interface, delivering a responsive and interactive experience for configuring scans and viewing results.
+        </p>
+
+        <h3>Key Functionality & Modules</h3>
+        <ul class="about-list">
+            <li><strong>SQL Injection Scanner:</strong> Actively probes web forms and URL parameters using a variety of payloads to detect potential error-based and boolean-based SQL injection flaws.</li>
+            <li><strong>Cross-Site Scripting (XSS) Scanner:</strong> Injects non-malicious script payloads into input fields to identify both reflected and stored XSS vulnerabilities by analyzing the server's response.</li>
+            <li><strong>CSRF & File Upload Analyzer:</strong> Includes dedicated modules to check for Cross-Site Request Forgery weaknesses by analyzing form tokens and to test for insecure file handling mechanisms that could allow malicious uploads.</li>
+            <li><strong>Reconnaissance Engine:</strong> Features a custom network scanner, inspired by Nmap, for initial host discovery, port scanning, and service banner grabbing to map the application's attack surface.</li>
+        </ul>
+
+        <h3>Technologies Used</h3>
+        <div class="tech-logo-grid">
+            <span><i class="devicon-python-plain colored"></i> Python</span>
+            <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+        </div>
+         <div class="project-detail-buttons">
+            <a href="https://github.com/Jebin-Projects/Autoxploit-The-All-in-One-Hacking-Solution.git" target="_blank" class="cta-button">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="gallery-section" data-aos="fade-up">
+        <h3>Evidence & Screenshots</h3>
+        <div class="image-gallery">
+            <img src="images/autoxploit-proof-1.jpg" alt="Autoxploit Screenshot 1">
+            <img src="images/autoxploit-proof-2.jpg" alt="Autoxploit Screenshot 2">
+            <img src="images/autoxploit-proof-3.jpg" alt="Autoxploit Screenshot 3">
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Anto Sebastine Jebin</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
